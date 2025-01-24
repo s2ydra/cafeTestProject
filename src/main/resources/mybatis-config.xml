@@ -8,11 +8,11 @@
 	</settings>
 	
 	<typeAliases>
-		<typeAlias type="kr.ac.kopo.symovie.model.Movie" alias="Movie"/>
+		<typeAlias type="kr.ac.kopo.sspare.model.Drink" alias="Drink"/>
 	
 	</typeAliases>
 	
 	<mappers>
-		<mapper resource="mapper/movie.xml"/>
+		<mapper resource="mapper/drink.xml"/>
 	</mappers>
 </configuration>
