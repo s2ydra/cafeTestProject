@@ -48,6 +48,11 @@
                 </tbody>
             </table>
         </div>
+        <div class="buttons">
+            <div>
+                <button type="button" onclick="location.href='add'">추가</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>

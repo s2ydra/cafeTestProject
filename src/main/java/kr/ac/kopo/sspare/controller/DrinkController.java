@@ -27,4 +27,10 @@ public class DrinkController {
 
         return path + "list";
     }
+
+    @GetMapping("/add")
+    String add() {
+
+        return path + "add";
+    }
 }
