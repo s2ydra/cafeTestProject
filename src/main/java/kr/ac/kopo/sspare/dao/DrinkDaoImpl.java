@@ -18,4 +18,9 @@ public class DrinkDaoImpl implements DrinkDao {
     public List<Drink> list() {
         return sql.selectList("drink.list");
     }
+
+    @Override
+    public void add(Drink item) {
+        sql.insert("drink.add", item);
+    }
 }

@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface DrinkDao {
     List<Drink> list();
+
+    void add(Drink item);
 }

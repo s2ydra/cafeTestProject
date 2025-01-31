@@ -5,4 +5,9 @@
     <select id="list" resultType="Drink">
         SELECT * FROM DRINK
     </select>
+
+    <insert id="add">
+        INSERT INTO drink
+        VALUES (DRINK_SEQ.nextval, #{drinkName}, #{drCategoryId}, #{drinkPrice}, #{drinkInfo})
+    </insert>
 </mapper>

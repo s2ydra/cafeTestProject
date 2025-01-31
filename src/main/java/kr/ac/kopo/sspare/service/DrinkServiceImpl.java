@@ -17,4 +17,9 @@ public class DrinkServiceImpl implements DrinkService {
     public List<Drink> list() {
         return dao.list();
     }
+
+    @Override
+    public void add(Drink item) {
+        dao.add(item);
+    }
 }

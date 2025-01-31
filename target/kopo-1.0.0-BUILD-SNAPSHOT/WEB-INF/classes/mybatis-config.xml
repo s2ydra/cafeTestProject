@@ -9,7 +9,7 @@
 	
 	<typeAliases>
 		<typeAlias type="kr.ac.kopo.sspare.model.Drink" alias="Drink"/>
-	
+		<typeAlias type="kr.ac.kopo.sspare.model.DrinkCategory" alias="DrinkCategory"/>
 	</typeAliases>
 	
 	<mappers>
