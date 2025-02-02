@@ -9,7 +9,6 @@ public class RootController {
 
     @GetMapping("/")
     String index(){
-
         return "index";
     }
 }

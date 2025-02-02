@@ -8,7 +8,6 @@ public class Drink {
     private int drinkPrice;
     private String drinkInfo;
 
-
     public Long getDrCategoryId() {
         return drCategoryId;
     }
