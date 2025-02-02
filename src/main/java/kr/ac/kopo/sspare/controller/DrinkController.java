@@ -15,31 +15,30 @@ import java.util.List;
 @RequestMapping("/drink")
 public class DrinkController {
 
-    @Autowired
-    DrinkService service;
+    private final DrinkService service;
 
-    final String path = "drink/";
+    private static final String path = "drink/";
+
+    public DrinkController(DrinkService service) {
+        this.service = service;
+    }
 
     @GetMapping("/list")
     String list(Model model) {
         List<Drink> list = service.list();
-
         model.addAttribute("list", list);
-
         return path + "list";
     }
 
     @GetMapping("/add")
     String add() {
-
         return path + "add";
     }
 
     @PostMapping("/add")
     String add(Drink item) {
-
+        System.out.println(item);
         service.add(item);
-
         return "redirect:list";
     }
 }

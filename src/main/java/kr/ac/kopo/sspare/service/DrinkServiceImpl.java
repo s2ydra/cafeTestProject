@@ -10,8 +10,11 @@ import java.util.List;
 @Service
 public class DrinkServiceImpl implements DrinkService {
 
-    @Autowired
-    DrinkDao dao;
+    private final DrinkDao dao;
+
+    public DrinkServiceImpl(DrinkDao dao) {
+        this.dao = dao;
+    }
 
     @Override
     public List<Drink> list() {

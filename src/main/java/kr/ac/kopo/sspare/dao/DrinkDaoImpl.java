@@ -10,9 +10,11 @@ import java.util.List;
 @Repository
 public class DrinkDaoImpl implements DrinkDao {
 
-    @Autowired
-    SqlSession sql;
+    private final SqlSession sql;
 
+    public DrinkDaoImpl(SqlSession sql) {
+        this.sql = sql;
+    }
 
     @Override
     public List<Drink> list() {
