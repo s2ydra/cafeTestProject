@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: super
@@ -30,8 +31,14 @@
           <input type="text" name="drinkName" placeholder="음료명을 입력하세요.">
         </div>
         <div>
-          <label>카테고리번호</label>
-          <input type="text" name="drCategoryId" placeholder="카테고리 번호를 작성하시오.">
+          <label>카테고리</label>
+<%--          <input type="text" name="drCategoryId" placeholder="카테고리 번호를 작성하시오.">--%>
+          <select name="drCategoryId">
+            <c:forEach var="item" items="${categories}">
+                <option value="${item.drCategoryId}">${item.drCategoryName}</option>
+            </c:forEach>
+
+          </select>
         </div>
         <div>
           <label>가격</label>

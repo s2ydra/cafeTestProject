@@ -1,6 +1,8 @@
 package kr.ac.kopo.sspare.controller;
 
 import kr.ac.kopo.sspare.model.Drink;
+import kr.ac.kopo.sspare.model.DrinkCategory;
+import kr.ac.kopo.sspare.service.DrinkCategoryService;
 import kr.ac.kopo.sspare.service.DrinkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,6 +20,9 @@ public class DrinkController {
     @Autowired
     DrinkService service;
 
+    @Autowired
+    DrinkCategoryService drCateService;
+
     final String path = "drink/";
 
     @GetMapping("/list")
@@ -30,7 +35,11 @@ public class DrinkController {
     }
 
     @GetMapping("/add")
-    String add() {
+    String add(Model model) {
+
+        List<DrinkCategory> categories = drCateService.list();
+
+        model.addAttribute("categories", categories);
 
         return path + "add";
     }

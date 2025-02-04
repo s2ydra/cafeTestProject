@@ -14,5 +14,6 @@
 	
 	<mappers>
 		<mapper resource="mapper/drink.xml"/>
+		<mapper resource="mapper/drinkCategory.xml"/>
 	</mappers>
 </configuration>
