@@ -42,7 +42,7 @@
           <textarea id="drinkInfo" name="drinkInfo"></textarea>
         </div>
         <div>
-          <button>추가</button>
+          <button type="submit">추가</button>
           <button type="button" onclick="location.href='list'">취소</button>
         </div>
       </form>

@@ -4,6 +4,7 @@ import kr.ac.kopo.sspare.dao.DrinkDao;
 import kr.ac.kopo.sspare.model.Drink;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
